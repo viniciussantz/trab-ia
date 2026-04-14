@@ -1,0 +1,14 @@
+CART Decision Tree
+
+OverTime=(No): No(944.0/110.0)
+OverTime!=(No)
+|  MonthlyIncome < 2475.0: Yes(48.0/21.0)
+|  MonthlyIncome >= 2475.0
+|  |  JobRole=(Research Director)|(Healthcare Representative)|(Manufacturing Director)|(Manager)|(Research Scientist)|(Human Resources): No(175.0/25.0)
+|  |  JobRole!=(Research Director)|(Healthcare Representative)|(Manufacturing Director)|(Manager)|(Research Scientist)|(Human Resources)
+|  |  |  StockOptionLevel < 0.5: Yes(37.0/25.0)
+|  |  |  StockOptionLevel >= 0.5: No(68.0/17.0)
+
+Number of Leaf Nodes: 5
+
+Size of the Tree: 9

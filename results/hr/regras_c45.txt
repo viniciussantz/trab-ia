@@ -1,0 +1,64 @@
+R1: IF TotalWorkingYears <= 2 AND OverTime = Yes AND MaritalStatus = Single AND TrainingTimesLastYear <= 5 THEN Attrition = Yes
+R2: IF TotalWorkingYears <= 2 AND OverTime = Yes AND MaritalStatus = Single AND TrainingTimesLastYear > 5 THEN Attrition = No
+R3: IF TotalWorkingYears <= 2 AND OverTime = Yes AND MaritalStatus = Married AND YearsSinceLastPromotion <= 0 AND PercentSalaryHike <= 18 THEN Attrition = Yes
+R4: IF TotalWorkingYears <= 2 AND OverTime = Yes AND MaritalStatus = Married AND YearsSinceLastPromotion <= 0 AND PercentSalaryHike > 18 THEN Attrition = No
+R5: IF TotalWorkingYears <= 2 AND OverTime = Yes AND MaritalStatus = Married AND YearsSinceLastPromotion > 0 THEN Attrition = No
+R6: IF TotalWorkingYears <= 2 AND OverTime = Yes AND MaritalStatus = Divorced THEN Attrition = No
+R7: IF TotalWorkingYears <= 2 AND OverTime = No AND JobInvolvement <= 1 THEN Attrition = Yes
+R8: IF TotalWorkingYears <= 2 AND OverTime = No AND JobInvolvement > 1 AND JobRole = Sales Executive THEN Attrition = No
+R9: IF TotalWorkingYears <= 2 AND OverTime = No AND JobInvolvement > 1 AND JobRole = Research Scientist THEN Attrition = No
+R10: IF TotalWorkingYears <= 2 AND OverTime = No AND JobInvolvement > 1 AND JobRole = Laboratory Technician AND Age <= 32 AND WorkLifeBalance <= 2 THEN Attrition = Yes
+R11: IF TotalWorkingYears <= 2 AND OverTime = No AND JobInvolvement > 1 AND JobRole = Laboratory Technician AND Age <= 32 AND WorkLifeBalance > 2 AND Gender = Female THEN Attrition = No
+R12: IF TotalWorkingYears <= 2 AND OverTime = No AND JobInvolvement > 1 AND JobRole = Laboratory Technician AND Age <= 32 AND WorkLifeBalance > 2 AND Gender = Male AND DistanceFromHome <= 8 THEN Attrition = Yes
+R13: IF TotalWorkingYears <= 2 AND OverTime = No AND JobInvolvement > 1 AND JobRole = Laboratory Technician AND Age <= 32 AND WorkLifeBalance > 2 AND Gender = Male AND DistanceFromHome > 8 THEN Attrition = No
+R14: IF TotalWorkingYears <= 2 AND OverTime = No AND JobInvolvement > 1 AND JobRole = Laboratory Technician AND Age > 32 THEN Attrition = No
+R15: IF TotalWorkingYears <= 2 AND OverTime = No AND JobInvolvement > 1 AND JobRole = Manufacturing Director THEN Attrition = No
+R16: IF TotalWorkingYears <= 2 AND OverTime = No AND JobInvolvement > 1 AND JobRole = Healthcare Representative THEN Attrition = No
+R17: IF TotalWorkingYears <= 2 AND OverTime = No AND JobInvolvement > 1 AND JobRole = Manager THEN Attrition = No
+R18: IF TotalWorkingYears <= 2 AND OverTime = No AND JobInvolvement > 1 AND JobRole = Sales Representative AND WorkLifeBalance <= 2 THEN Attrition = Yes
+R19: IF TotalWorkingYears <= 2 AND OverTime = No AND JobInvolvement > 1 AND JobRole = Sales Representative AND WorkLifeBalance > 2 AND DailyRate <= 495 THEN Attrition = Yes
+R20: IF TotalWorkingYears <= 2 AND OverTime = No AND JobInvolvement > 1 AND JobRole = Sales Representative AND WorkLifeBalance > 2 AND DailyRate > 495 THEN Attrition = No
+R21: IF TotalWorkingYears <= 2 AND OverTime = No AND JobInvolvement > 1 AND JobRole = Research Director THEN Attrition = No
+R22: IF TotalWorkingYears <= 2 AND OverTime = No AND JobInvolvement > 1 AND JobRole = Human Resources THEN Attrition = Yes
+R23: IF TotalWorkingYears > 2 AND OverTime = Yes AND MonthlyIncome <= 2468 AND JobLevel <= 1 AND YearsAtCompany <= 3 THEN Attrition = Yes
+R24: IF TotalWorkingYears > 2 AND OverTime = Yes AND MonthlyIncome <= 2468 AND JobLevel <= 1 AND YearsAtCompany > 3 AND DailyRate <= 722 THEN Attrition = Yes
+R25: IF TotalWorkingYears > 2 AND OverTime = Yes AND MonthlyIncome <= 2468 AND JobLevel <= 1 AND YearsAtCompany > 3 AND DailyRate > 722 AND WorkLifeBalance <= 1 THEN Attrition = Yes
+R26: IF TotalWorkingYears > 2 AND OverTime = Yes AND MonthlyIncome <= 2468 AND JobLevel <= 1 AND YearsAtCompany > 3 AND DailyRate > 722 AND WorkLifeBalance > 1 AND DistanceFromHome <= 15 AND YearsWithCurrManager <= 5 THEN Attrition = No
+R27: IF TotalWorkingYears > 2 AND OverTime = Yes AND MonthlyIncome <= 2468 AND JobLevel <= 1 AND YearsAtCompany > 3 AND DailyRate > 722 AND WorkLifeBalance > 1 AND DistanceFromHome <= 15 AND YearsWithCurrManager > 5 AND TrainingTimesLastYear <= 2 THEN Attrition = Yes
+R28: IF TotalWorkingYears > 2 AND OverTime = Yes AND MonthlyIncome <= 2468 AND JobLevel <= 1 AND YearsAtCompany > 3 AND DailyRate > 722 AND WorkLifeBalance > 1 AND DistanceFromHome <= 15 AND YearsWithCurrManager > 5 AND TrainingTimesLastYear > 2 THEN Attrition = No
+R29: IF TotalWorkingYears > 2 AND OverTime = Yes AND MonthlyIncome <= 2468 AND JobLevel <= 1 AND YearsAtCompany > 3 AND DailyRate > 722 AND WorkLifeBalance > 1 AND DistanceFromHome > 15 THEN Attrition = Yes
+R30: IF TotalWorkingYears > 2 AND OverTime = Yes AND MonthlyIncome <= 2468 AND JobLevel > 1 THEN Attrition = No
+R31: IF TotalWorkingYears > 2 AND OverTime = Yes AND MonthlyIncome > 2468 AND EnvironmentSatisfaction <= 2 AND NumCompaniesWorked <= 5 AND JobSatisfaction <= 3 AND EducationField = Life Sciences AND JobInvolvement <= 1 THEN Attrition = Yes
+R32: IF TotalWorkingYears > 2 AND OverTime = Yes AND MonthlyIncome > 2468 AND EnvironmentSatisfaction <= 2 AND NumCompaniesWorked <= 5 AND JobSatisfaction <= 3 AND EducationField = Life Sciences AND JobInvolvement > 1 AND Gender = Female AND YearsWithCurrManager <= 5 THEN Attrition = Yes
+R33: IF TotalWorkingYears > 2 AND OverTime = Yes AND MonthlyIncome > 2468 AND EnvironmentSatisfaction <= 2 AND NumCompaniesWorked <= 5 AND JobSatisfaction <= 3 AND EducationField = Life Sciences AND JobInvolvement > 1 AND Gender = Female AND YearsWithCurrManager > 5 THEN Attrition = No
+R34: IF TotalWorkingYears > 2 AND OverTime = Yes AND MonthlyIncome > 2468 AND EnvironmentSatisfaction <= 2 AND NumCompaniesWorked <= 5 AND JobSatisfaction <= 3 AND EducationField = Life Sciences AND JobInvolvement > 1 AND Gender = Male AND RelationshipSatisfaction <= 1 THEN Attrition = Yes
+R35: IF TotalWorkingYears > 2 AND OverTime = Yes AND MonthlyIncome > 2468 AND EnvironmentSatisfaction <= 2 AND NumCompaniesWorked <= 5 AND JobSatisfaction <= 3 AND EducationField = Life Sciences AND JobInvolvement > 1 AND Gender = Male AND RelationshipSatisfaction > 1 THEN Attrition = No
+R36: IF TotalWorkingYears > 2 AND OverTime = Yes AND MonthlyIncome > 2468 AND EnvironmentSatisfaction <= 2 AND NumCompaniesWorked <= 5 AND JobSatisfaction <= 3 AND EducationField = Other THEN Attrition = No
+R37: IF TotalWorkingYears > 2 AND OverTime = Yes AND MonthlyIncome > 2468 AND EnvironmentSatisfaction <= 2 AND NumCompaniesWorked <= 5 AND JobSatisfaction <= 3 AND EducationField = Medical THEN Attrition = No
+R38: IF TotalWorkingYears > 2 AND OverTime = Yes AND MonthlyIncome > 2468 AND EnvironmentSatisfaction <= 2 AND NumCompaniesWorked <= 5 AND JobSatisfaction <= 3 AND EducationField = Marketing AND JobInvolvement <= 2 THEN Attrition = Yes
+R39: IF TotalWorkingYears > 2 AND OverTime = Yes AND MonthlyIncome > 2468 AND EnvironmentSatisfaction <= 2 AND NumCompaniesWorked <= 5 AND JobSatisfaction <= 3 AND EducationField = Marketing AND JobInvolvement > 2 AND DistanceFromHome <= 6 THEN Attrition = No
+R40: IF TotalWorkingYears > 2 AND OverTime = Yes AND MonthlyIncome > 2468 AND EnvironmentSatisfaction <= 2 AND NumCompaniesWorked <= 5 AND JobSatisfaction <= 3 AND EducationField = Marketing AND JobInvolvement > 2 AND DistanceFromHome > 6 THEN Attrition = Yes
+R41: IF TotalWorkingYears > 2 AND OverTime = Yes AND MonthlyIncome > 2468 AND EnvironmentSatisfaction <= 2 AND NumCompaniesWorked <= 5 AND JobSatisfaction <= 3 AND EducationField = Technical Degree THEN Attrition = Yes
+R42: IF TotalWorkingYears > 2 AND OverTime = Yes AND MonthlyIncome > 2468 AND EnvironmentSatisfaction <= 2 AND NumCompaniesWorked <= 5 AND JobSatisfaction <= 3 AND EducationField = Human Resources THEN Attrition = No
+R43: IF TotalWorkingYears > 2 AND OverTime = Yes AND MonthlyIncome > 2468 AND EnvironmentSatisfaction <= 2 AND NumCompaniesWorked <= 5 AND JobSatisfaction > 3 AND JobInvolvement <= 1 AND JobLevel <= 1 THEN Attrition = Yes
+R44: IF TotalWorkingYears > 2 AND OverTime = Yes AND MonthlyIncome > 2468 AND EnvironmentSatisfaction <= 2 AND NumCompaniesWorked <= 5 AND JobSatisfaction > 3 AND JobInvolvement <= 1 AND JobLevel > 1 THEN Attrition = No
+R45: IF TotalWorkingYears > 2 AND OverTime = Yes AND MonthlyIncome > 2468 AND EnvironmentSatisfaction <= 2 AND NumCompaniesWorked <= 5 AND JobSatisfaction > 3 AND JobInvolvement > 1 THEN Attrition = No
+R46: IF TotalWorkingYears > 2 AND OverTime = Yes AND MonthlyIncome > 2468 AND EnvironmentSatisfaction <= 2 AND NumCompaniesWorked > 5 AND RelationshipSatisfaction <= 3 THEN Attrition = Yes
+R47: IF TotalWorkingYears > 2 AND OverTime = Yes AND MonthlyIncome > 2468 AND EnvironmentSatisfaction <= 2 AND NumCompaniesWorked > 5 AND RelationshipSatisfaction > 3 AND Gender = Female THEN Attrition = No
+R48: IF TotalWorkingYears > 2 AND OverTime = Yes AND MonthlyIncome > 2468 AND EnvironmentSatisfaction <= 2 AND NumCompaniesWorked > 5 AND RelationshipSatisfaction > 3 AND Gender = Male THEN Attrition = Yes
+R49: IF TotalWorkingYears > 2 AND OverTime = Yes AND MonthlyIncome > 2468 AND EnvironmentSatisfaction > 2 AND MaritalStatus = Single AND YearsSinceLastPromotion <= 5 AND TotalWorkingYears <= 9 AND JobSatisfaction <= 3 AND MonthlyRate <= 8053 THEN Attrition = No
+R50: IF TotalWorkingYears > 2 AND OverTime = Yes AND MonthlyIncome > 2468 AND EnvironmentSatisfaction > 2 AND MaritalStatus = Single AND YearsSinceLastPromotion <= 5 AND TotalWorkingYears <= 9 AND JobSatisfaction <= 3 AND MonthlyRate > 8053 THEN Attrition = Yes
+R51: IF TotalWorkingYears > 2 AND OverTime = Yes AND MonthlyIncome > 2468 AND EnvironmentSatisfaction > 2 AND MaritalStatus = Single AND YearsSinceLastPromotion <= 5 AND TotalWorkingYears <= 9 AND JobSatisfaction > 3 THEN Attrition = No
+R52: IF TotalWorkingYears > 2 AND OverTime = Yes AND MonthlyIncome > 2468 AND EnvironmentSatisfaction > 2 AND MaritalStatus = Single AND YearsSinceLastPromotion <= 5 AND TotalWorkingYears > 9 THEN Attrition = No
+R53: IF TotalWorkingYears > 2 AND OverTime = Yes AND MonthlyIncome > 2468 AND EnvironmentSatisfaction > 2 AND MaritalStatus = Single AND YearsSinceLastPromotion > 5 THEN Attrition = Yes
+R54: IF TotalWorkingYears > 2 AND OverTime = Yes AND MonthlyIncome > 2468 AND EnvironmentSatisfaction > 2 AND MaritalStatus = Married THEN Attrition = No
+R55: IF TotalWorkingYears > 2 AND OverTime = Yes AND MonthlyIncome > 2468 AND EnvironmentSatisfaction > 2 AND MaritalStatus = Divorced AND WorkLifeBalance <= 1 AND DailyRate <= 478 THEN Attrition = No
+R56: IF TotalWorkingYears > 2 AND OverTime = Yes AND MonthlyIncome > 2468 AND EnvironmentSatisfaction > 2 AND MaritalStatus = Divorced AND WorkLifeBalance <= 1 AND DailyRate > 478 THEN Attrition = Yes
+R57: IF TotalWorkingYears > 2 AND OverTime = Yes AND MonthlyIncome > 2468 AND EnvironmentSatisfaction > 2 AND MaritalStatus = Divorced AND WorkLifeBalance > 1 AND DistanceFromHome <= 18 THEN Attrition = No
+R58: IF TotalWorkingYears > 2 AND OverTime = Yes AND MonthlyIncome > 2468 AND EnvironmentSatisfaction > 2 AND MaritalStatus = Divorced AND WorkLifeBalance > 1 AND DistanceFromHome > 18 AND Gender = Female THEN Attrition = No
+R59: IF TotalWorkingYears > 2 AND OverTime = Yes AND MonthlyIncome > 2468 AND EnvironmentSatisfaction > 2 AND MaritalStatus = Divorced AND WorkLifeBalance > 1 AND DistanceFromHome > 18 AND Gender = Male THEN Attrition = Yes
+R60: IF TotalWorkingYears > 2 AND OverTime = No AND WorkLifeBalance <= 1 AND YearsWithCurrManager <= 0 THEN Attrition = Yes
+R61: IF TotalWorkingYears > 2 AND OverTime = No AND WorkLifeBalance <= 1 AND YearsWithCurrManager > 0 AND YearsSinceLastPromotion <= 6 THEN Attrition = No
+R62: IF TotalWorkingYears > 2 AND OverTime = No AND WorkLifeBalance <= 1 AND YearsWithCurrManager > 0 AND YearsSinceLastPromotion > 6 AND JobSatisfaction <= 2 THEN Attrition = No
+R63: IF TotalWorkingYears > 2 AND OverTime = No AND WorkLifeBalance <= 1 AND YearsWithCurrManager > 0 AND YearsSinceLastPromotion > 6 AND JobSatisfaction > 2 THEN Attrition = Yes
+R64: IF TotalWorkingYears > 2 AND OverTime = No AND WorkLifeBalance > 1 THEN Attrition = No

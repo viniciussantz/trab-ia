@@ -1,0 +1,52 @@
+CART Decision Tree
+
+Curricular_units_2nd_sem_approved < 3.5
+|  Curricular_units_2nd_sem_approved < 1.5
+|  |  Curricular_units_1st_sem_enrolled < 0.5
+|  |  |  Tuition_fees_up_to_date < 0.5: Dropout(21.0/4.0)
+|  |  |  Tuition_fees_up_to_date >= 0.5
+|  |  |  |  Age_at_enrollment < 25.5: Graduate(71.0/75.0)
+|  |  |  |  Age_at_enrollment >= 25.5: Dropout(8.0/1.0)
+|  |  Curricular_units_1st_sem_enrolled >= 0.5
+|  |  |  Mother_s_occupation < 17.0: Dropout(734.0/61.0)
+|  |  |  Mother_s_occupation >= 17.0: Enrolled(7.0/2.0)
+|  Curricular_units_2nd_sem_approved >= 1.5
+|  |  Tuition_fees_up_to_date < 0.5: Dropout(82.0/7.0)
+|  |  Tuition_fees_up_to_date >= 0.5
+|  |  |  Age_at_enrollment < 22.5: Enrolled(158.0/117.0)
+|  |  |  Age_at_enrollment >= 22.5
+|  |  |  |  Mother_s_occupation < 18.0: Dropout(72.0/41.0)
+|  |  |  |  Mother_s_occupation >= 18.0: Enrolled(6.0/0.0)
+Curricular_units_2nd_sem_approved >= 3.5
+|  Curricular_units_2nd_sem_approved < 5.5
+|  |  Tuition_fees_up_to_date < 0.5
+|  |  |  GDP < 1.905: Dropout(58.0/9.0)
+|  |  |  GDP >= 1.905
+|  |  |  |  Curricular_units_1st_sem_enrolled < 6.5: Enrolled(17.0/8.0)
+|  |  |  |  Curricular_units_1st_sem_enrolled >= 6.5: Dropout(9.0/0.0)
+|  |  Tuition_fees_up_to_date >= 0.5
+|  |  |  Curricular_units_2nd_sem_approved < 4.5
+|  |  |  |  Curricular_units_1st_sem_approved < 3.5: Enrolled(49.0/35.0)
+|  |  |  |  Curricular_units_1st_sem_approved >= 3.5
+|  |  |  |  |  Course < 15.5: Graduate(123.0/118.0)
+|  |  |  |  |  Course >= 15.5: Enrolled(24.0/15.0)
+|  |  |  Curricular_units_2nd_sem_approved >= 4.5
+|  |  |  |  Curricular_units_2nd_sem_enrolled < 6.5: Graduate(440.0/184.0)
+|  |  |  |  Curricular_units_2nd_sem_enrolled >= 6.5
+|  |  |  |  |  Curricular_units_2nd_sem_credited < 3.5: Enrolled(25.0/12.0)
+|  |  |  |  |  Curricular_units_2nd_sem_credited >= 3.5: Dropout(12.0/2.0)
+|  Curricular_units_2nd_sem_approved >= 5.5
+|  |  Curricular_units_1st_sem_evaluations < 8.5: Graduate(1064.0/124.0)
+|  |  Curricular_units_1st_sem_evaluations >= 8.5
+|  |  |  Tuition_fees_up_to_date < 0.5: Dropout(16.0/14.0)
+|  |  |  Tuition_fees_up_to_date >= 0.5
+|  |  |  |  Curricular_units_2nd_sem_grade < 12.904285714285715
+|  |  |  |  |  Course < 11.5: Graduate(142.0/55.0)
+|  |  |  |  |  Course >= 11.5
+|  |  |  |  |  |  Curricular_units_2nd_sem_enrolled < 7.5: Enrolled(29.0/14.0)
+|  |  |  |  |  |  Curricular_units_2nd_sem_enrolled >= 7.5: Graduate(79.0/40.0)
+|  |  |  |  Curricular_units_2nd_sem_grade >= 12.904285714285715: Graduate(202.0/38.0)
+
+Number of Leaf Nodes: 24
+
+Size of the Tree: 47

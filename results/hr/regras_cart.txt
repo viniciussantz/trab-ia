@@ -1,0 +1,5 @@
+R1: IF OverTime=(No) THEN Attrition = No
+R2: IF OverTime!=(No) AND MonthlyIncome < 2475.0 THEN Attrition = Yes
+R3: IF OverTime!=(No) AND MonthlyIncome >= 2475.0 AND JobRole=(Research Director)|(Healthcare Representative)|(Manufacturing Director)|(Manager)|(Research Scientist)|(Human Resources) THEN Attrition = No
+R4: IF OverTime!=(No) AND MonthlyIncome >= 2475.0 AND JobRole!=(Research Director)|(Healthcare Representative)|(Manufacturing Director)|(Manager)|(Research Scientist)|(Human Resources) AND StockOptionLevel < 0.5 THEN Attrition = Yes
+R5: IF OverTime!=(No) AND MonthlyIncome >= 2475.0 AND JobRole!=(Research Director)|(Healthcare Representative)|(Manufacturing Director)|(Manager)|(Research Scientist)|(Human Resources) AND StockOptionLevel >= 0.5 THEN Attrition = No
